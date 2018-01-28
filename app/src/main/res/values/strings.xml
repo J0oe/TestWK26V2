@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestWK26V2</string>
+    <string name="facebook_app_id">765606570302314</string>
+    <string name="fb_login_protocol_scheme">fb4765606570302314</string>
+</resources>

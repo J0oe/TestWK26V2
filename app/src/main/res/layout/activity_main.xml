@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ex.admin.testwk26v2.MainActivity">
+
+    <EditText
+        android:id="@+id/idTextForSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/clickToFind" />
+
+    <Button
+        android:id="@+id/clickToFind"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="onClickSearch"
+        android:text="F" />
+
+
+    <LinearLayout
+
+        android:id="@+id/idBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:onClick="onClickTime"
+            android:text="time" />
+
+        <Button
+            android:onClick="onClickFromTo"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="from-to" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:onClick="onClickPopular"
+            android:text="popular" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:onClick="onCLickShowMeAuthor"
+            android:text="author" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:onClick="onClickNext"
+            android:text="->" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/idListForNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/idBox"
+        android:layout_below="@+id/clickToFind"></ListView>
+
+    <LinearLayout
+        android:id="@+id/idFindFromTo"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@color/cardview_light_background"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/idFindFrom"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:hint="from (ex 2013-01-23)" />
+
+            <EditText
+                android:id="@+id/idFindTo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:hint="to (ex 2013-01-25)" />
+        </LinearLayout>
+
+        <Button
+            android:onClick="onCLickShowMeFromTo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="find" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/idListViewAuthor"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@color/cardview_light_background"
+        android:visibility="invisible"></ListView>
+
+
+</RelativeLayout>

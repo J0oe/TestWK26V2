@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/idTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Tittle!" />
+
+    <TextView
+        android:id="@+id/idDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idAuthor"
+        android:gravity="center"
+        android:text="Description!" />
+
+    <TextView
+        android:id="@+id/idUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/idTime"
+        android:autoLink="web"
+        android:gravity="center"
+        android:text="Url!" />
+
+    <ImageView
+        android:layout_below="@+id/idDescription"
+        android:id="@+id/idImageUrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/idUrl"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/idAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTittle"
+        android:gravity="center"
+        android:text="author!" />
+
+    <TextView
+        android:id="@+id/idTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_button"
+        android:gravity="center"
+        android:text="time!" />
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal" />
+
+
+    <com.facebook.share.widget.ShareButton
+        android:id="@+id/idShareBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/login_button" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="onClickSaveNews"
+        android:text="S" />
+</RelativeLayout>
